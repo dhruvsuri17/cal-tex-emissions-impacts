@@ -1,0 +1,87 @@
+STATISTICAL TESTS AND DIAGNOSTICS FOR CAISO
+============================================================
+
+This file contains diagnostic tests for the panel regression models
+including tests for autocorrelation, heteroskedasticity, and residual analysis.
+
+DIAGNOSTICS FOR DEPENDENT VARIABLE: GENERATION
+--------------------------------------------------
+1. DURBIN-WATSON TEST FOR AUTOCORRELATION:
+   Test Statistic: 1.8524
+   Interpretation: No significant autocorrelation
+   Note: Values close to 2 indicate no autocorrelation
+
+2. BREUSCH-PAGAN TEST FOR HETEROSKEDASTICITY:
+   Test Statistic: 2993.7902
+   P-value: 0.0000
+   Interpretation: Reject null hypothesis - Heteroskedasticity present
+   Note: Null hypothesis is homoskedasticity
+
+3. PLANT-SPECIFIC DURBIN-WATSON STATISTICS:
+   Number of plants analyzed: 82
+   Mean DW statistic: 1.4394
+   Median DW statistic: 1.5146
+   Min DW statistic: 0.5918
+   Max DW statistic: 2.3240
+   Standard deviation: 0.3283
+
+   Plant-specific DW statistics saved to: results/SI/dw_stats_CAISO_generation.csv
+
+   DW distribution plot saved to: results/SI/dw_distribution_CAISO_generation.png
+
+============================================================
+
+DIAGNOSTICS FOR DEPENDENT VARIABLE: CO2
+--------------------------------------------------
+1. DURBIN-WATSON TEST FOR AUTOCORRELATION:
+   Test Statistic: 1.8540
+   Interpretation: No significant autocorrelation
+   Note: Values close to 2 indicate no autocorrelation
+
+2. BREUSCH-PAGAN TEST FOR HETEROSKEDASTICITY:
+   Test Statistic: 2795.0468
+   P-value: 0.0000
+   Interpretation: Reject null hypothesis - Heteroskedasticity present
+   Note: Null hypothesis is homoskedasticity
+
+3. PLANT-SPECIFIC DURBIN-WATSON STATISTICS:
+   Number of plants analyzed: 82
+   Mean DW statistic: 1.4398
+   Median DW statistic: 1.5033
+   Min DW statistic: 0.5684
+   Max DW statistic: 2.1042
+   Standard deviation: 0.3146
+
+   Plant-specific DW statistics saved to: results/SI/dw_stats_CAISO_co2.csv
+
+   DW distribution plot saved to: results/SI/dw_distribution_CAISO_co2.png
+
+============================================================
+
+DIAGNOSTICS FOR DEPENDENT VARIABLE: INTENSITY
+--------------------------------------------------
+1. DURBIN-WATSON TEST FOR AUTOCORRELATION:
+   Test Statistic: 1.8508
+   Interpretation: No significant autocorrelation
+   Note: Values close to 2 indicate no autocorrelation
+
+2. BREUSCH-PAGAN TEST FOR HETEROSKEDASTICITY:
+   Test Statistic: 4488.6172
+   P-value: 0.0000
+   Interpretation: Reject null hypothesis - Heteroskedasticity present
+   Note: Null hypothesis is homoskedasticity
+
+3. PLANT-SPECIFIC DURBIN-WATSON STATISTICS:
+   Number of plants analyzed: 82
+   Mean DW statistic: 1.4339
+   Median DW statistic: 1.5257
+   Min DW statistic: 0.1495
+   Max DW statistic: 2.1474
+   Standard deviation: 0.4490
+
+   Plant-specific DW statistics saved to: results/SI/dw_stats_CAISO_intensity.csv
+
+   DW distribution plot saved to: results/SI/dw_distribution_CAISO_intensity.png
+
+============================================================
+

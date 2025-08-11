@@ -1,0 +1,96 @@
+PANEL REGRESSION RESULTS FOR CAISO
+============================================================
+
+This file contains detailed results from panel regression analyses
+examining the relationship between electricity generation, CO2 emissions,
+and emissions intensity with various explanatory variables.
+
+MODEL SPECIFICATION (M1):
+----------------------------------------
+Dependent Variable = α + β₁×residual_demand + β₂×solar + β₃×wind + 
+                     β₄×SUN_ext + β₅×WND_ext + β₆×D_ext + β₇×Wramp + 
+                     Plant FE + Month FE + Year FE + Plant×Month FE + ε
+
+VARIABLE DEFINITIONS:
+------------------------------
+residual_demand: Net demand (demand + imports - hydro)
+solar: Solar generation capacity factor
+wind: Wind generation capacity factor
+SUN_ext: External solar generation in neighboring areas
+WND_ext: External wind generation in neighboring areas
+D_ext: External electricity demand in neighboring areas
+Wramp: Wind generation ramp rate
+Plant FE: Plant-specific fixed effects
+Month FE: Month-specific fixed effects
+Year FE: Year-specific fixed effects
+Plant×Month FE: Plant-month interaction fixed effects
+
+RESULTS FOR DEPENDENT VARIABLE: GENERATION
+--------------------------------------------------
+Model Fit Statistics:
+  R-squared: 0.8411
+  Adjusted R-squared: 0.8376
+  F-statistic: 236.58
+  Prob (F-statistic): 0.0000
+  Number of observations: 44,724.0
+  Degrees of freedom (residuals): 43,744.0
+
+Coefficient Estimates:
+Variable            Coefficient    Std Error      t-stat      P-value     Significance
+------------------------------------------------------------------------------------------
+residual_demand             2.0113         0.0441      45.563      0.0000         ***
+solar                      -0.2729         0.0311      -8.772      0.0000         ***
+wind                       -0.2271         0.0115     -19.708      0.0000         ***
+SUN_ext                     0.0115         0.0311       0.369      0.7123            
+WND_ext                    -0.0110         0.0047      -2.349      0.0188           *
+D_ext                       0.0476         0.0327       1.457      0.1450            
+Wramp                       0.1189         0.0147       8.076      0.0000         ***
+
+============================================================
+
+RESULTS FOR DEPENDENT VARIABLE: CO2
+--------------------------------------------------
+Model Fit Statistics:
+  R-squared: 0.8414
+  Adjusted R-squared: 0.8378
+  F-statistic: 237.01
+  Prob (F-statistic): 0.0000
+  Number of observations: 44,724.0
+  Degrees of freedom (residuals): 43,744.0
+
+Coefficient Estimates:
+Variable            Coefficient    Std Error      t-stat      P-value     Significance
+------------------------------------------------------------------------------------------
+residual_demand             1.9094         0.0404      47.276      0.0000         ***
+solar                      -0.2548         0.0285      -8.950      0.0000         ***
+wind                       -0.2159         0.0105     -20.477      0.0000         ***
+SUN_ext                     0.0087         0.0285       0.304      0.7611            
+WND_ext                    -0.0093         0.0043      -2.165      0.0304           *
+D_ext                       0.0459         0.0299       1.536      0.1246            
+Wramp                       0.1162         0.0135       8.625      0.0000         ***
+
+============================================================
+
+RESULTS FOR DEPENDENT VARIABLE: INTENSITY
+--------------------------------------------------
+Model Fit Statistics:
+  R-squared: 0.7704
+  Adjusted R-squared: 0.7653
+  F-statistic: 149.92
+  Prob (F-statistic): 0.0000
+  Number of observations: 44,724.0
+  Degrees of freedom (residuals): 43,744.0
+
+Coefficient Estimates:
+Variable            Coefficient    Std Error      t-stat      P-value     Significance
+------------------------------------------------------------------------------------------
+residual_demand            -0.1018         0.0063     -16.166      0.0000         ***
+solar                       0.0181         0.0044       4.080      0.0000         ***
+wind                        0.0112         0.0016       6.813      0.0000         ***
+SUN_ext                    -0.0028         0.0044      -0.635      0.5253            
+WND_ext                     0.0017         0.0007       2.577      0.0100          **
+D_ext                      -0.0017         0.0047      -0.368      0.7131            
+Wramp                      -0.0027         0.0021      -1.290      0.1970            
+
+============================================================
+
