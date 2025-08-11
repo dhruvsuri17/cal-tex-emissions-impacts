@@ -1,6 +1,6 @@
 # Panel Regression Analysis for Electricity Generation Data
 
-## Quick Start
+## Quick Start (GitHub Users)
 
 **After cloning this repository:**
 
@@ -8,10 +8,20 @@
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Run everything at once
+# 2. Run main analysis
 python run_panel_regressions.py
 
-# 3. Check results in results/ folder
+# 3. Generate all figures
+python generate_figure1.py
+python generate_figure2.py
+python generate_figure3.py
+python generate_figure4.py
+
+# 4. Generate SI figures
+python generate_si_figures.py
+python generate_si_figure11.py
+
+# 5. Check results in results/ folder
 ```
 
 **Important**: The data files in `data/processed/` are required to run the analysis. See [SETUP.md](SETUP.md) for details.

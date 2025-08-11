@@ -18,14 +18,16 @@ Ensure the required data files are in `data/processed/`:
 
 ### 3. Run the Analysis
 ```bash
-# Run everything at once
+# Run main analysis
 python run_panel_regressions.py
 
-# And run individual components
+# Generate all figures
 python generate_figure1.py
 python generate_figure2.py
 python generate_figure3.py
 python generate_figure4.py
+
+# Generate SI figures
 python generate_si_figures.py
 python generate_si_figure11.py
 ```
