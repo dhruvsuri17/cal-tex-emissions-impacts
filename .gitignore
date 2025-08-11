@@ -53,4 +53,7 @@ Thumbs.db
 data/
 # Exclude CSV and Excel files in data folder, but allow in results
 data/**/*.csv
-data/**/*.xlsx 
+data/**/*.xlsx
+
+# Exclude large CSV files that exceed GitHub limits
+results/**/*_processed_data.csv 
