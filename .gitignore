@@ -49,13 +49,8 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Results (optional - might want to include these for reproducibility)
-# results/
-# *.png
-# *.csv
-# *.txt
-
 # Data files (excluded from git - too large and contains sensitive data)
-data/processed/
-*.csv
-*.xlsx 
+data/
+# Exclude CSV and Excel files in data folder, but allow in results
+data/**/*.csv
+data/**/*.xlsx 

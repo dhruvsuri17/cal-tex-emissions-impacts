@@ -53,7 +53,7 @@ def process_files(year, fuel_type, region):
         Processed and merged data with capacity factor calculations
     """
     # Load CEMS emissions data
-    cems_path = f"data/processed/emissions-hourly-{year}-combined-{region}"
+    cems_path = f"data/processed/emissions-hourly-{year}-combined-{region}.csv"
     df = pd.read_csv(cems_path, low_memory=False)
     
     # Filter by fuel type
@@ -147,9 +147,9 @@ def generate_si_figure(region, fuel_type, years, output_dir):
     for year in years:
         print(f"  Processing year {year}...")
         try:
-            if region == 'ca':
+            if region == 'CAISO':
                 cems_file = f'emissions-hourly-{year}-combined-CAISO'
-            else:  # tx
+            else:  # ERCOT
                 cems_file = f'emissions-hourly-{year}-combined-ERCOT'
             
             df860_file = f'3_1_Generator_Y{year}'
@@ -246,13 +246,13 @@ def main():
     print("Processing data and generating figures...")
     
     # CAISO Natural Gas
-    generate_si_figure('ca', 'Natural Gas', years, output_dir)
+    generate_si_figure('CAISO', 'Natural Gas', years, output_dir)
     
     # ERCOT Natural Gas
-    generate_si_figure('tx', 'Natural Gas', years, output_dir)
+    generate_si_figure('ERCOT', 'Natural Gas', years, output_dir)
     
     # ERCOT Coal
-    generate_si_figure('tx', 'Coal', years, output_dir)
+    generate_si_figure('ERCOT', 'Coal', years, output_dir)
     
     print("\n" + "=" * 70)
     print("SI FIGURES GENERATION COMPLETE")
